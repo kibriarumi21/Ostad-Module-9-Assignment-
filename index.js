@@ -11,7 +11,8 @@ const server = http.createServer((req, res) => {
 
   let filePath = "";
 
-  // Route Handling
+  // Route Handling 
+  
   if (req.url === "/" || req.url === "/home") {
     filePath = path.join(__dirname, "Index.html");
   } else if (req.url === "/blog") {
