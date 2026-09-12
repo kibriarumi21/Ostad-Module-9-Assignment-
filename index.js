@@ -4,7 +4,9 @@ const fs = require("fs");
 
 const path = require("path");
 
+
 // Port definition 5000
+
 const PORT = 5000;
 
 const server = http.createServer((req, res) => {
@@ -12,6 +14,7 @@ const server = http.createServer((req, res) => {
   res.setHeader("Content-Type", "text/html");
 
   let filePath = "";
+  
 
   // Route Handling 
 
@@ -30,6 +33,7 @@ const server = http.createServer((req, res) => {
   }
 
   // Read and serve the corresponding HTML file
+
   fs.readFile(filePath, "utf-8", (err, data) => {
     if (err) {
       res.statusCode = 500;
@@ -42,6 +46,7 @@ const server = http.createServer((req, res) => {
 });
 
 // Server Listening on Port 5000
+
 server.listen(5000, () => {
   console.log("Server is running on 5000");
 });
