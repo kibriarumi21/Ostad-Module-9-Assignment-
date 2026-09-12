@@ -2,7 +2,7 @@ const http = require("http");
 const fs = require("fs");
 const path = require("path");
 
-// Port definition
+// Port definition 5000
 const PORT = 5000;
 
 const server = http.createServer((req, res) => {
@@ -12,7 +12,7 @@ const server = http.createServer((req, res) => {
   let filePath = "";
 
   // Route Handling 
-  
+
   if (req.url === "/" || req.url === "/home") {
     filePath = path.join(__dirname, "Index.html");
   } else if (req.url === "/blog") {
